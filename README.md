@@ -51,7 +51,7 @@ Entry-level IT professional focused on network troubleshooting, Windows Server /
 
 - **Objective:** Determine why users could not load a website, using a tcpdump capture of DNS and ICMP traffic.
 - **Methodology:** Analyzed tcpdump output showing DNS lookups over UDP answered by ICMP "udp port unreachable" errors. Concluded the DNS service was not reachable on the server, so the website name could not be translated to an IP address. Listed likely causes (DNS server down, firewall blocking, incorrect configuration) and escalated findings to a senior team member.
-- **Key Artifacts:** [View Network Traffic Analysis Report](dns-icmp-udp-port-unreachable.pdf)
+- **Key Artifacts:** [View Network Traffic Analysis Report](dns-icmp-udp-port-unreachable.pdf.pdf)
 
 #### 2. Network Traffic Analysis: SYN Flood DoS Investigation
 
@@ -60,7 +60,7 @@ Entry-level IT professional focused on network troubleshooting, Windows Server /
 - **Objective:** Diagnose a network interruption causing server connection timeouts.
 - **Methodology:** Reviewed logs showing the web server overwhelmed by SYN requests. Explained the TCP three-way handshake (SYN, SYN-ACK, ACK) and how a flood of SYN packets exhausts the server's resources, leaving none for legitimate connections.
 - **Finding:** Probable SYN flood denial-of-service attack.
-- **Key Artifacts:** [View SYN Flood Incident Report](syn-flood-dos-report.pdf)
+- **Key Artifacts:** [View SYN Flood Incident Report](syn-flood-dos-report.pdf.pdf)
 
 #### 3. Incident Response: ICMP Flood DDoS (NIST CSF)
 
@@ -68,7 +68,7 @@ Entry-level IT professional focused on network troubleshooting, Windows Server /
 
 - **Objective:** Document an ICMP flood that took down internal network services, organized by the five NIST Cybersecurity Framework functions.
 - **Methodology:** Mapped the incident to Identify, Protect, Detect, Respond, and Recover. Documented the response: firewall rate limiting for incoming ICMP, IDS/IPS filtering, source IP verification to catch spoofed addresses, network monitoring for abnormal traffic, and a recovery order (block external ICMP, stop non-critical services, restore critical services first, then bring the rest back online).
-- **Key Artifacts:** [View ICMP Flood Incident Report Analysis](icmp-flood-nist-csf-report.pdf)
+- **Key Artifacts:** [View ICMP Flood Incident Report Analysis](icmp-flood-nist-csf-report.pdf.pdf)
 
 ---
 
@@ -81,7 +81,7 @@ Entry-level IT professional focused on network troubleshooting, Windows Server /
 - **Objective:** Identify the protocol involved, document the incident, and recommend a remediation.
 - **Methodology:** Reviewed a tcpdump capture to identify HTTP at the application layer as the transport for the malicious file. Concluded the attacker likely brute-forced the admin account, changed the password, and injected code that prompted users to download malware.
 - **Remediation:** Prevent reuse of default and previous passwords, and require two-factor authentication.
-- **Key Artifacts:** [View Security Incident Report](web-server-brute-force-report.pdf)
+- **Key Artifacts:** [View Security Incident Report](web-server-brute-force-report.pdf.pdf)
 
 #### 5. Security Logging: SQL Data Filtering
 
@@ -100,7 +100,7 @@ SELECT * FROM log_in_attempts
 WHERE NOT country LIKE 'MEX%';
 ```
 
-- **Key Artifacts:** [View SQL Queries & Log Analysis](sql-log-analysis.pdf)
+- **Key Artifacts:** [View SQL Queries & Log Analysis](sql-log-analysis.pdf.pdf)
 
 #### 6. Risk Management: Server Vulnerability Assessment
 
@@ -109,7 +109,7 @@ WHERE NOT country LIKE 'MEX%';
 - **Objective:** Assess the security posture of a database server's access controls.
 - **Methodology:** Followed NIST SP 800-30 Rev. 1 to score threat sources by likelihood and severity. Highest-rated risk: an employee disrupting mission-critical operations (likelihood 2 x severity 3 = 6).
 - **Remediation:** Authentication, authorization, and auditing mechanisms; role-based access control; MFA; TLS in place of SSL; IP allow-listing to corporate offices.
-- **Key Artifacts:** [View Vulnerability Assessment Report](vulnerability-assessment-nist-800-30.pdf)
+- **Key Artifacts:** [View Vulnerability Assessment Report](vulnerability-assessment-nist-800-30.pdf.pdf)
 
 #### 7. Incident Handler's Journal
 
@@ -119,7 +119,7 @@ WHERE NOT country LIKE 'MEX%';
   - **#2 Wireshark:** Analyzed a packet capture file in Wireshark.
   - **#3 tcpdump:** Captured and examined network traffic from the command line.
   - **#4 VirusTotal:** Investigated a suspicious SHA-256 file hash from an email attachment alert and confirmed it was reported as malicious.
-- **Key Artifacts:** [View Incident Handler's Journal](incident-handlers-journal.pdf)
+- **Key Artifacts:** [View Incident Handler's Journal](incident-handlers-journal.pdf.pdf)
 
 ---
 
