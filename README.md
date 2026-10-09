@@ -90,7 +90,7 @@ Entry-level IT professional focused on network troubleshooting, Windows Server /
 - **Objective:** Query security logs to isolate failed and unusual login attempts, and pull employee device information for security updates.
 - **Methodology:** Used SQL filters on the `log_in_attempts` and `employees` tables in MariaDB, including `AND`, `OR`, `NOT`, `LIKE`, and the `%` wildcard.
 
-```sql
+``` sql 
 -- Failed login attempts after business hours
 SELECT * FROM log_in_attempts
 WHERE login_time > '18:00' AND success = FALSE;
